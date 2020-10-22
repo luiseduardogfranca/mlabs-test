@@ -1,9 +1,10 @@
 import React from "react";
+import { ScheduleHome } from "../components/ScheduleHome/index";
 
 const HomePage = () => {
   return (
     <>
-      <div></div>
+      <ScheduleHome />
     </>
   );
 };

@@ -1,5 +1,4 @@
 import React, { memo } from "react";
-import { ReactComponent as logo } from "./assets/image/home-posts.svg";
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import { Routes } from "./routes";

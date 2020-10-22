@@ -4,11 +4,9 @@ import { Navbar } from "./components/Navbar/Navbar";
 export const AppWrapper = (props) => {
   return (
     <>
-      <div>
+      <div style={{ height: "100%" }}>
         <Navbar />
-        <div>
-          <div>{props.children}</div>
-        </div>
+        <div className="container-app">{props.children}</div>
       </div>
     </>
   );

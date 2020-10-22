@@ -12,6 +12,14 @@ body {
   background: #f8f8f8;
 }
 
+#root {
+  height: 100%;
+}
+
+.container-app {
+  height: calc(100% - var(--height-navabar));
+}
+
 @font-face {
   font-family: "Poppins-Medium";
   /* src: url("./assets/fonts/Montserrat-Bold.ttf"); */
@@ -28,4 +36,8 @@ body {
   font-family: "Poppins-Bold";
   /* src: url("./assets/fonts/Montserrat-Bold.ttf"); */
   src: url("./assets/fonts/Poppins-Bold.ttf");
+}
+
+:root {
+  --height-navabar: 80px;
 }
