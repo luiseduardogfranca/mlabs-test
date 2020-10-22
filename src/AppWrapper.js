@@ -1,10 +1,12 @@
 import React from "react";
+import { Navbar } from "./components/Navbar/Navbar";
 
 export const AppWrapper = (props) => {
   return (
     <>
-      <div id="App">
-        <div className="content">
+      <div>
+        <Navbar />
+        <div>
           <div>{props.children}</div>
         </div>
       </div>
