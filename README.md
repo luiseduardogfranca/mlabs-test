@@ -2,7 +2,7 @@
 
 A application for scheduling postings in social medias
 
-![Build Status](https://travis-ci.org/luiseduardogfranca/event-scheduling.svg?branch=master)
+<!-- ![Build Status](https://travis-ci.org/luiseduardogfranca/event-scheduling.svg?branch=master) -->
 
 This project is an posting scheduling web application, developed in JavaScript, with ReactJS framework to manage the posting in many social medias.
 
@@ -12,7 +12,7 @@ Posting Scheduling application: [https://app-scheduling-event.herokuapp.com/](ht
 
 - ReactJS
 - jest
-- styled-component
+- styled-components
 
 ### CI/CD
 
