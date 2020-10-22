@@ -6,7 +6,7 @@ A application for scheduling postings in social medias
 
 This project is an posting scheduling web application, developed in JavaScript, with ReactJS framework to manage the posting in many social medias.
 
-Posting Scheduling application: [https://app-scheduling-event.herokuapp.com/](https://app-scheduling-event.herokuapp.com/)
+Posting Scheduling application: [https://scheduling-mlabs.herokuapp.com/](https://scheduling-mlabs.herokuapp.com/)
 
 ## Depedencies
 
