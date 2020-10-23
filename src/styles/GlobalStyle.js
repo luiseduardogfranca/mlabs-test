@@ -23,6 +23,7 @@ export const WrapperComponent = styled.div`
     font-family: Poppins-Regular;
     font-size: 0.8em;
     border-bottom: 1px solid #e0e0e0;
+    color: #333333;
   }
 
   .file-drop-target,
@@ -34,4 +35,14 @@ export const WrapperComponent = styled.div`
 export const ContainerComponent = styled.div`
   height: 100%;
   padding: 15px;
+`;
+
+export const TextArea = styled.textarea`
+  resize: none;
+  width: 95%;
+  height: 90%;
+  border: none;
+  outline: none;
+  font-family: Poppins-Regular;
+  color: #4f4f4f;
 `;

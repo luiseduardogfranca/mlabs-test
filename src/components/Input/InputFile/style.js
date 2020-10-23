@@ -33,6 +33,16 @@ export const ContainerInputFile = styled.button`
   font-family: Poppins-Medium;
   width: 184px;
   height: 45px;
+  outline: none;
+  transition: opacity 100ms;
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  label {
+    cursor: pointer;
+  }
 
   input[type="file"] {
     display: none;

@@ -33,4 +33,10 @@ export const ContainerButton = styled.button`
   font-family: Poppins-Medium;
   width: 184px;
   height: 45px;
+  cursor: pointer;
+  transition: opacity 100ms;
+  outline: none;
+  &:active {
+    opacity: 0.7;
+  }
 `;

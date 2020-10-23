@@ -14,6 +14,7 @@ import {
 } from "./style";
 import { Container, WrapperComponent } from "../../styles/GlobalStyle";
 import { UploadImage } from "../UploadImage/";
+import { InputText } from "../Input";
 
 export const ScheduleBody = () => {
   const socialMedias = {
@@ -57,7 +58,10 @@ export const ScheduleBody = () => {
             <ContainerScheduleInput>
               <WrapperComponent>
                 <h1>Texto do post</h1>
-                <div></div>
+                <InputText
+                  placeholder={"Aqui vai o texto descritivo desse post"}
+                  setText={setText}
+                ></InputText>
               </WrapperComponent>
             </ContainerScheduleInput>
             <ContainerScheduleUpload>
@@ -72,7 +76,7 @@ export const ScheduleBody = () => {
         <ContainerSchedulePreview>
           <WrapperComponent>
             <h1>Visualização do post</h1>
-            <img src={imageFile.src}></img>
+            {text}
           </WrapperComponent>
         </ContainerSchedulePreview>
       </GridSchedule>

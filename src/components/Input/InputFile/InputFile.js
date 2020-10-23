@@ -6,7 +6,7 @@ export const InputFile = (props) => {
 
   return (
     <ContainerInputFile {...props}>
-      <label for={"upload-file"}>{label}</label>
+      <label htmlFor={"upload-file"}>{label}</label>
       <input
         onChange={props.handleUpload}
         id={"upload-file"}
