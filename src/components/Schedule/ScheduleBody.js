@@ -12,7 +12,7 @@ import {
   ContainerScheduleInput,
   ContainerScheduleUpload,
 } from "./style";
-import { Container } from "../../styles/GlobalStyle";
+import { Container, WrapperComponent } from "../../styles/GlobalStyle";
 
 export const ScheduleBody = () => {
   return (
@@ -21,16 +21,41 @@ export const ScheduleBody = () => {
         <ContainerScheduleMenu>
           <GridScheduleMenu>
             <GridScheduleConfig>
-              <ContainerScheduleSocialMedia></ContainerScheduleSocialMedia>
-              <ContainerScheduleDate></ContainerScheduleDate>
+              <ContainerScheduleSocialMedia>
+                <WrapperComponent>
+                  <h1>Redes Sociais</h1>
+                  <div></div>
+                </WrapperComponent>
+              </ContainerScheduleSocialMedia>
+              <ContainerScheduleDate>
+                <WrapperComponent>
+                  <h1>Data de publicação</h1>
+                  <div></div>
+                </WrapperComponent>
+              </ContainerScheduleDate>
             </GridScheduleConfig>
 
-            <ContainerScheduleInput></ContainerScheduleInput>
-            <ContainerScheduleUpload></ContainerScheduleUpload>
+            <ContainerScheduleInput>
+              <WrapperComponent>
+                <h1>Texto do post</h1>
+                <div></div>
+              </WrapperComponent>
+            </ContainerScheduleInput>
+            <ContainerScheduleUpload>
+              <WrapperComponent>
+                <h1>Upload do post</h1>
+                <div></div>
+              </WrapperComponent>
+            </ContainerScheduleUpload>
           </GridScheduleMenu>
         </ContainerScheduleMenu>
 
-        <ContainerSchedulePreview></ContainerSchedulePreview>
+        <ContainerSchedulePreview>
+          <WrapperComponent>
+            <h1>Visualização do post</h1>
+            <div></div>
+          </WrapperComponent>
+        </ContainerSchedulePreview>
       </GridSchedule>
     </Container>
   );
