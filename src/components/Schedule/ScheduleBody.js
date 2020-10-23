@@ -13,8 +13,23 @@ import {
   ContainerScheduleUpload,
 } from "./style";
 import { Container, WrapperComponent } from "../../styles/GlobalStyle";
+import { UploadImage } from "../UploadImage/";
 
 export const ScheduleBody = () => {
+  const socialMedias = {
+    INSTAGRAM: false,
+    LINKEDIN: false,
+    YOUTUBE: false,
+    PINTEREST: false,
+    TWITTER: false,
+    FACEBOOK: false,
+  };
+
+  const [socialMediaSelected, setSocialMediaSelected] = useState(socialMedias);
+  const [text, setText] = useState("");
+  const [image, setImage] = useState(null);
+  const [date, setDate] = useState("");
+
   return (
     <Container>
       <GridSchedule>
@@ -44,7 +59,7 @@ export const ScheduleBody = () => {
             <ContainerScheduleUpload>
               <WrapperComponent>
                 <h1>Upload do post</h1>
-                <div></div>
+                <UploadImage></UploadImage>
               </WrapperComponent>
             </ContainerScheduleUpload>
           </GridScheduleMenu>

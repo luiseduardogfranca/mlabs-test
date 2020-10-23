@@ -18,9 +18,15 @@ export const WrapperComponent = styled.div`
   border: 1px solid #e0e0e0;
 
   h1 {
+    margin: 0;
     padding: 5px 10px;
     font-family: Poppins-Regular;
     font-size: 0.8em;
     border-bottom: 1px solid #e0e0e0;
   }
+`;
+
+export const ContainerComponent = styled.div`
+  height: 100%;
+  padding: 15px;
 `;
