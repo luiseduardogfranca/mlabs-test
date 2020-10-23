@@ -27,8 +27,12 @@ export const ScheduleBody = () => {
 
   const [socialMediaSelected, setSocialMediaSelected] = useState(socialMedias);
   const [text, setText] = useState("");
-  const [image, setImage] = useState(null);
+  const [imageFile, setImageFile] = useState({ file: "", src: "" });
   const [date, setDate] = useState("");
+
+  // useEffect(() => {
+  //   if (imageFile) console.log(imageFile);
+  // }, [imageFile]);
 
   return (
     <Container>
@@ -59,7 +63,7 @@ export const ScheduleBody = () => {
             <ContainerScheduleUpload>
               <WrapperComponent>
                 <h1>Upload do post</h1>
-                <UploadImage></UploadImage>
+                <UploadImage setImageFile={setImageFile}></UploadImage>
               </WrapperComponent>
             </ContainerScheduleUpload>
           </GridScheduleMenu>
@@ -68,7 +72,7 @@ export const ScheduleBody = () => {
         <ContainerSchedulePreview>
           <WrapperComponent>
             <h1>Visualização do post</h1>
-            <div></div>
+            <img src={imageFile.src}></img>
           </WrapperComponent>
         </ContainerSchedulePreview>
       </GridSchedule>
