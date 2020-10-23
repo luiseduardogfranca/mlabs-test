@@ -17,7 +17,7 @@ body {
 }
 
 .container-app {
-  height: calc(100% - var(--height-navabar) - var(--height-footbar));
+  height: calc(100% - var(--height-navbar) - var(--height-footbar));
 }
 
 @font-face {
@@ -39,6 +39,6 @@ body {
 }
 
 :root {
-  --height-navabar: 80px;
+  --height-navbar: 80px;
   --height-footbar: 67px;
 }

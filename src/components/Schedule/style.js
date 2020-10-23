@@ -10,7 +10,7 @@ export const GridSchedule = styled.div`
   @media (max-width: 590px) {
     grid-template-areas: "Menu" "Preview";
     grid-template-columns: 90%;
-    grid-template-rows: 90% 0;
+    grid-template-rows: 100% 0;
   }
 `;
 
@@ -35,13 +35,13 @@ export const GridScheduleConfig = styled.div`
   display: grid;
   height: 100%;
   grid-template-areas: "SocialMedia Date";
-  grid-template-columns: 45% 45%;
+  grid-template-columns: 48% 48%;
   justify-content: space-between;
 
   @media (max-width: 590px) {
     grid-template-areas: "SocialMedia" "Date";
     grid-template-columns: 100%;
-    grid-template-rows: 45% 45%;
+    grid-template-rows: 48% 48%;
     align-content: space-between;
   }
 `;

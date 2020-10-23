@@ -8,6 +8,8 @@ export const ContainerAvatar = styled.div`
   }
 
   img {
+    width: 46px;
+    height: 46px;
     margin-right: 2em;
     border-radius: 100%;
   }

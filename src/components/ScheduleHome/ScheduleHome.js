@@ -9,7 +9,7 @@ export const ScheduleHome = () => {
     <ContainerHome>
       <img src={PostImage}></img>
       <Link to={"/scheduling"}>
-        <Button label={"Agendar post"}></Button>
+        <Button color={"orange"} label={"Agendar post"}></Button>
       </Link>
     </ContainerHome>
   );

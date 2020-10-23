@@ -5,5 +5,5 @@ import { ContainerButton } from "./style";
 export const Button = (props) => {
   const { label } = props;
 
-  return <ContainerButton>{label}</ContainerButton>;
+  return <ContainerButton {...props}>{label}</ContainerButton>;
 };
