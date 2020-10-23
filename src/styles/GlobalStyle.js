@@ -24,6 +24,11 @@ export const WrapperComponent = styled.div`
     font-size: 0.8em;
     border-bottom: 1px solid #e0e0e0;
   }
+
+  .file-drop-target,
+  .file-drop {
+    height: 100%;
+  }
 `;
 
 export const ContainerComponent = styled.div`
