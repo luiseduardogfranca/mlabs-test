@@ -8,9 +8,11 @@ export const GridSchedule = styled.div`
   justify-content: space-around;
 
   @media (max-width: 590px) {
-    grid-template-areas: "Menu" "Preview";
-    grid-template-columns: 90%;
-    grid-template-rows: 100% 0;
+    display: -webkit-flex;
+    flex-direction: column;
+    min-height: 90%;
+    width: 90%;
+    align-self: center;
   }
 `;
 
@@ -24,30 +26,29 @@ export const GridScheduleMenu = styled.div`
   align-content: space-around;
 
   @media (max-width: 590px) {
-    grid-template-areas: "Config" "Input" "Upload";
-    grid-template-columns: 100%;
-    grid-template-rows: 35% 30% 30%;
+    display: -webkit-flex;
+    flex-direction: column;
   }
 `;
 
 export const GridScheduleConfig = styled.div`
   grid-area: Config;
   display: grid;
-  height: 100%;
+  height: auto;
   grid-template-areas: "SocialMedia Date";
   grid-template-columns: 48% 48%;
   justify-content: space-between;
 
   @media (max-width: 590px) {
-    grid-template-areas: "SocialMedia" "Date";
-    grid-template-columns: 100%;
-    grid-template-rows: 48% 48%;
-    align-content: space-between;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 `;
 
 export const ContainerScheduleMenu = styled.div`
   grid-area: Menu;
+  height: 100%;
 `;
 
 export const ContainerSchedulePreview = styled.div`
@@ -59,22 +60,34 @@ export const ContainerSchedulePreview = styled.div`
 
 export const ContainerScheduleSocialMedia = styled.div`
   grid-area: SocialMedia;
+  min-height: 100px;
+  margin-bottom: 10px;
 `;
 
 export const ContainerScheduleDate = styled.div`
   grid-area: Date;
+  min-height: 100px;
+  margin-bottom: 10px;
 `;
 
 export const ContainerScheduleInput = styled.div`
   grid-area: Input;
+  min-height: 150px;
+  margin-bottom: 10px;
+  height: auto;
 `;
 
 export const ContainerScheduleUpload = styled.div`
   grid-area: Upload;
+  min-height: 150px;
+  height: auto;
+  @media (max-width: 590px) {
+    margin-bottom: calc(var(--height-footbar) + 10px);
+  }
 `;
 
 export const ContainerInput = styled.div`
-  display: flex;
+  display: -webkit-flex;
   height: 100%;
   width: 100%;
   justify-content: space-evenly;

@@ -2,11 +2,14 @@ import styled from "styled-components";
 
 export const ContainerFooter = styled.div`
   background: #ffffff;
-  padding: 0 40px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  // padding: 0 40px;
 
-  @media (max-width: 590px) {
-    padding: 0 24px;
-  }
+  // @media (max-width: 590px) {
+  //   padding: 0 24px;
+  // }
 `;
 
 export const ContainerContent = styled.div`
