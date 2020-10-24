@@ -11,10 +11,11 @@ import {
   ContainerScheduleDate,
   ContainerScheduleInput,
   ContainerScheduleUpload,
+  ContainerInput,
 } from "./style";
 import { Container, WrapperComponent } from "../../styles/GlobalStyle";
 import { UploadImage } from "../UploadImage/";
-import { InputText } from "../Input";
+import { InputDate, InputText } from "../Input";
 
 export const ScheduleBody = () => {
   const socialMedias = {
@@ -29,7 +30,7 @@ export const ScheduleBody = () => {
   const [socialMediaSelected, setSocialMediaSelected] = useState(socialMedias);
   const [text, setText] = useState("");
   const [imageFile, setImageFile] = useState({ file: "", src: "" });
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState({ date: "", time: "" });
 
   // useEffect(() => {
   //   if (imageFile) console.log(imageFile);
@@ -50,7 +51,26 @@ export const ScheduleBody = () => {
               <ContainerScheduleDate>
                 <WrapperComponent>
                   <h1>Data de publicação</h1>
-                  <div></div>
+                  <ContainerInput>
+                    <InputDate
+                      id={"input-date"}
+                      value={date.date}
+                      typeDate
+                      placeholder={"DD/MM"}
+                      setValue={(target) =>
+                        setDate((el) => ({ ...el, date: target.value }))
+                      }
+                    ></InputDate>
+                    <InputDate
+                      id={"input-time"}
+                      value={date.time}
+                      typeTime
+                      placeholder="HH:MM"
+                      setValue={(target) =>
+                        setDate((el) => ({ ...el, time: target.value }))
+                      }
+                    ></InputDate>
+                  </ContainerInput>
                 </WrapperComponent>
               </ContainerScheduleDate>
             </GridScheduleConfig>

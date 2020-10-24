@@ -6,8 +6,7 @@ export const InputText = (props) => {
   const { setText } = props;
 
   const handleTextOnChange = (value) => {
-    console.log(value);
-    setText((el) => value);
+    if (setText) setText((el) => value);
   };
 
   return (

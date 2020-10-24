@@ -72,3 +72,11 @@ export const ContainerScheduleInput = styled.div`
 export const ContainerScheduleUpload = styled.div`
   grid-area: Upload;
 `;
+
+export const ContainerInput = styled.div`
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+`;

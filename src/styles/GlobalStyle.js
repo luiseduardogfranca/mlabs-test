@@ -46,3 +46,12 @@ export const TextArea = styled.textarea`
   font-family: Poppins-Regular;
   color: #4f4f4f;
 `;
+
+export const Input = styled.input`
+  width: 95%;
+  height: 90%;
+  border: none;
+  outline: none;
+  font-family: Poppins-Regular;
+  color: #4f4f4f;
+`;
