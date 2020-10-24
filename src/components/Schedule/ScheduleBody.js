@@ -16,6 +16,7 @@ import {
 import { Container, WrapperComponent } from "../../styles/GlobalStyle";
 import { UploadImage } from "../UploadImage/";
 import { InputDate, InputText } from "../Input";
+import { MenuSocialMedia } from "../MenuSocialMedia/";
 
 export const ScheduleBody = () => {
   const socialMedias = {
@@ -45,7 +46,9 @@ export const ScheduleBody = () => {
               <ContainerScheduleSocialMedia>
                 <WrapperComponent>
                   <h1>Redes Sociais</h1>
-                  <div></div>
+                  <MenuSocialMedia
+                    socialMedias={setSocialMediaSelected}
+                  ></MenuSocialMedia>
                 </WrapperComponent>
               </ContainerScheduleSocialMedia>
               <ContainerScheduleDate>

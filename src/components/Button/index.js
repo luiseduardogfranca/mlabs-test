@@ -1,2 +1,4 @@
 import { Button } from "./Button";
-export { Button };
+import { ButtonSocialMedia } from "./ButtonSocialMedia/ButtonSocialMedia";
+
+export { Button, ButtonSocialMedia };
