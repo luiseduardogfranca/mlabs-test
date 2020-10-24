@@ -51,7 +51,10 @@ export const MenuSocialMedia = (props) => {
 
   return (
     <ContainerMenu>
-      <ButtonSocialMedia checked></ButtonSocialMedia>
+      <ButtonSocialMedia
+        checked
+        onClick={() => alert("Ola")}
+      ></ButtonSocialMedia>
       <ButtonSocialMedia disabled></ButtonSocialMedia>
       <ButtonSocialMedia></ButtonSocialMedia>
       <ButtonSocialMedia></ButtonSocialMedia>

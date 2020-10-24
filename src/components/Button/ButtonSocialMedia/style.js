@@ -15,8 +15,8 @@ export const ContainerButtonSocialMedia = styled.button`
   font-family: Poppins-Medium;
   width: 33px;
   height: 33px;
-  cursor: pointer;
   outline: none;
+  cursor: pointer;
   transition: background 300ms;
 
   svg path {
@@ -25,12 +25,12 @@ export const ContainerButtonSocialMedia = styled.button`
   }
 
   &:hover {
-    background: #fff3e0;
-    border-color: #ef9f2e;
+    background: ${(props) => (props.disabled ? "#DDDDDD" : "#fff3e0")};
+    border-color: ${(props) => (props.disabled ? "#9E9E9E" : "#ef9f2e")};
 
     svg,
     path {
-      fill: #ef9f2e;
+      fill: ${(props) => (props.disabled ? "#9E9E9E" : "#ef9f2e")};
     }
   }
 `;
