@@ -23,6 +23,7 @@ export const ContainerUpload = styled.div`
   }
 
   @media (max-width: 590px) {
+    height: 90px;
     h1,
     img {
       display: none;

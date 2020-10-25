@@ -9,4 +9,15 @@ export const ContainerText = styled.div`
   justify-content: space-evenly;
   border: 1px solid #949494;
   border-radius: 4px;
+
+  @media (max-width: 590px) {
+    height: 90px;
+    h1,
+    img {
+      display: none;
+    }
+    button {
+      height: 50%;
+    }
+  }
 `;
