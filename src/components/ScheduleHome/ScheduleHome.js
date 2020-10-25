@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { ContainerHome } from "./style";
+import { ContainerFlexHome, ContainerHome } from "./style";
 import PostImage from "../../assets/image/home-posts.svg";
 import { Button } from "../Button";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export const ScheduleHome = () => {
+  const history = useHistory();
+
   return (
-    <ContainerHome>
-      <img src={PostImage}></img>
-      <Link to={"/scheduling"}>
-        <Button color={"orange"} label={"Agendar post"}></Button>
-      </Link>
-    </ContainerHome>
+    <ontainerHome>
+      <ContainerFlexHome>
+        <img src={PostImage}></img>
+        <Button
+          onClick={() => history.push("/scheduling")}
+          color={"orange"}
+          label={"Agendar post"}
+        ></Button>
+      </ContainerFlexHome>
+    </ontainerHome>
   );
 };

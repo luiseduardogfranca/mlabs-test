@@ -8,9 +8,9 @@ export const GridSchedule = styled.div`
   justify-content: space-around;
 
   @media (max-width: 590px) {
-    display: -webkit-flex;
+    display: flex;
     flex-direction: column;
-    min-height: 90%;
+    height: 90%;
     width: 90%;
     align-self: center;
   }
@@ -26,7 +26,7 @@ export const GridScheduleMenu = styled.div`
   align-content: space-between;
 
   @media (max-width: 590px) {
-    display: -webkit-flex;
+    display: flex;
     flex-direction: column;
   }
 `;
@@ -34,21 +34,22 @@ export const GridScheduleMenu = styled.div`
 export const GridScheduleConfig = styled.div`
   grid-area: Config;
   display: grid;
-  height: auto;
+  height: 100%;
   grid-template-areas: "SocialMedia Date";
   grid-template-columns: 48% 48%;
-  justify-content: space-between;
+  justify-content: space-around;
 
   @media (max-width: 590px) {
-    display: -webkit-flex;
+    display: flex;
+    height: 210;
     flex-direction: column;
-    justify-content: flex-start;
   }
 `;
 
 export const ContainerScheduleMenu = styled.div`
   grid-area: Menu;
   height: 100%;
+  width: 100%;
 `;
 
 export const ContainerSchedulePreview = styled.div`
@@ -62,7 +63,7 @@ export const ContainerScheduleSocialMedia = styled.div`
   grid-area: SocialMedia;
 
   @media (max-width: 590px) {
-    min-height: 100px;
+    height: 110px;
     margin-bottom: 10px;
   }
 `;
@@ -71,7 +72,7 @@ export const ContainerScheduleDate = styled.div`
   grid-area: Date;
 
   @media (max-width: 590px) {
-    min-height: 100px;
+    height: 100px;
     margin-bottom: 10px;
   }
 `;
@@ -80,17 +81,15 @@ export const ContainerScheduleInput = styled.div`
   grid-area: Input;
 
   @media (max-width: 590px) {
-    min-height: 150px;
+    flex-grow: 10;
     margin-bottom: 10px;
-    height: auto;
   }
 `;
 
 export const ContainerScheduleUpload = styled.div`
   grid-area: Upload;
   @media (max-width: 590px) {
-    min-height: 150px;
-    height: auto;
+    flex-grow: 1;
     margin-bottom: calc(var(--height-footbar) + 10px);
   }
 `;

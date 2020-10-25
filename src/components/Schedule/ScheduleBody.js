@@ -41,59 +41,63 @@ export const ScheduleBody = () => {
     <Container>
       <GridSchedule>
         <ContainerScheduleMenu>
-          <GridScheduleMenu>
-            <GridScheduleConfig>
-              <ContainerScheduleSocialMedia>
+          <div style={{ width: "100%", height: "100%" }}>
+            <GridScheduleMenu>
+              <div>
+                <GridScheduleConfig>
+                  <ContainerScheduleSocialMedia>
+                    <WrapperComponent>
+                      <h1>Redes Sociais</h1>
+                      <MenuSocialMedia
+                        socialMedias={setSocialMediaSelected}
+                      ></MenuSocialMedia>
+                    </WrapperComponent>
+                  </ContainerScheduleSocialMedia>
+                  <ContainerScheduleDate>
+                    <WrapperComponent>
+                      <h1>Data de publicação</h1>
+                      <ContainerInput>
+                        <InputDate
+                          id={"input-date"}
+                          value={date.date}
+                          typeDate
+                          placeholder={"DD/MM"}
+                          setValue={(target) =>
+                            setDate((el) => ({ ...el, date: target.value }))
+                          }
+                        ></InputDate>
+                        <InputDate
+                          id={"input-time"}
+                          value={date.time}
+                          typeTime
+                          placeholder="HH:MM"
+                          setValue={(target) =>
+                            setDate((el) => ({ ...el, time: target.value }))
+                          }
+                        ></InputDate>
+                      </ContainerInput>
+                    </WrapperComponent>
+                  </ContainerScheduleDate>
+                </GridScheduleConfig>
+              </div>
+              <ContainerScheduleInput>
                 <WrapperComponent>
-                  <h1>Redes Sociais</h1>
-                  <MenuSocialMedia
-                    socialMedias={setSocialMediaSelected}
-                  ></MenuSocialMedia>
+                  <h1>Texto do post</h1>
+                  <InputText
+                    placeholder={"Aqui vai o texto descritivo desse post"}
+                    setText={setText}
+                  ></InputText>
                 </WrapperComponent>
-              </ContainerScheduleSocialMedia>
-              <ContainerScheduleDate>
-                <WrapperComponent>
-                  <h1>Data de publicação</h1>
-                  <ContainerInput>
-                    <InputDate
-                      id={"input-date"}
-                      value={date.date}
-                      typeDate
-                      placeholder={"DD/MM"}
-                      setValue={(target) =>
-                        setDate((el) => ({ ...el, date: target.value }))
-                      }
-                    ></InputDate>
-                    <InputDate
-                      id={"input-time"}
-                      value={date.time}
-                      typeTime
-                      placeholder="HH:MM"
-                      setValue={(target) =>
-                        setDate((el) => ({ ...el, time: target.value }))
-                      }
-                    ></InputDate>
-                  </ContainerInput>
-                </WrapperComponent>
-              </ContainerScheduleDate>
-            </GridScheduleConfig>
+              </ContainerScheduleInput>
 
-            <ContainerScheduleInput>
-              <WrapperComponent>
-                <h1>Texto do post</h1>
-                <InputText
-                  placeholder={"Aqui vai o texto descritivo desse post"}
-                  setText={setText}
-                ></InputText>
-              </WrapperComponent>
-            </ContainerScheduleInput>
-            <ContainerScheduleUpload>
-              <WrapperComponent>
-                <h1>Upload do post</h1>
-                <UploadImage setImageFile={setImageFile}></UploadImage>
-              </WrapperComponent>
-            </ContainerScheduleUpload>
-          </GridScheduleMenu>
+              <ContainerScheduleUpload>
+                <WrapperComponent>
+                  <h1>Upload do post</h1>
+                  <UploadImage setImageFile={setImageFile}></UploadImage>
+                </WrapperComponent>
+              </ContainerScheduleUpload>
+            </GridScheduleMenu>
+          </div>
         </ContainerScheduleMenu>
 
         <ContainerSchedulePreview>

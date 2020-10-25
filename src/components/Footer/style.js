@@ -5,11 +5,6 @@ export const ContainerFooter = styled.div`
   position: fixed;
   width: 100%;
   bottom: 0;
-  // padding: 0 40px;
-
-  // @media (max-width: 590px) {
-  //   padding: 0 24px;
-  // }
 `;
 
 export const ContainerContent = styled.div`
@@ -17,14 +12,13 @@ export const ContainerContent = styled.div`
   align-items: center;
   justify-content: flex-end;
   height: var(--height-footbar);
-  width: 100%;
-
+  width: calc(100% - 20px);
   button {
     margin-left: 10px;
   }
 
   @media (max-width: 590px) {
-    justify-content: space-around;
+    justify-content: space-evenly;
     button {
       margin-left: 0;
       width: 30%;
