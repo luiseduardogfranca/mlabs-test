@@ -13,9 +13,13 @@ export const ContainerUpload = styled.div`
   h1 {
     color: #828282;
     font-family: Poppins-Regular;
-    font-size: 0.8em;
+    font-size: 0.7em;
     border: none;
     text-align: center;
+  }
+
+  img {
+    height: 30%;
   }
 
   @media (max-width: 590px) {

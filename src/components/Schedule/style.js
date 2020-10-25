@@ -23,7 +23,7 @@ export const GridScheduleMenu = styled.div`
   grid-template-columns: 100%;
   grid-template-rows: 20% 35% 35%;
 
-  align-content: space-around;
+  align-content: space-between;
 
   @media (max-width: 590px) {
     display: -webkit-flex;
@@ -60,28 +60,37 @@ export const ContainerSchedulePreview = styled.div`
 
 export const ContainerScheduleSocialMedia = styled.div`
   grid-area: SocialMedia;
-  min-height: 100px;
-  margin-bottom: 10px;
+
+  @media (max-width: 590px) {
+    min-height: 100px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const ContainerScheduleDate = styled.div`
   grid-area: Date;
-  min-height: 100px;
-  margin-bottom: 10px;
+
+  @media (max-width: 590px) {
+    min-height: 100px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const ContainerScheduleInput = styled.div`
   grid-area: Input;
-  min-height: 150px;
-  margin-bottom: 10px;
-  height: auto;
+
+  @media (max-width: 590px) {
+    min-height: 150px;
+    margin-bottom: 10px;
+    height: auto;
+  }
 `;
 
 export const ContainerScheduleUpload = styled.div`
   grid-area: Upload;
-  min-height: 150px;
-  height: auto;
   @media (max-width: 590px) {
+    min-height: 150px;
+    height: auto;
     margin-bottom: calc(var(--height-footbar) + 10px);
   }
 `;

@@ -32,7 +32,7 @@ export const ContainerInputFile = styled.button`
   font-size: 0.8em;
   font-family: Poppins-Medium;
   width: 184px;
-  height: 45px;
+  height: 36px;
   outline: none;
   transition: opacity 100ms;
 

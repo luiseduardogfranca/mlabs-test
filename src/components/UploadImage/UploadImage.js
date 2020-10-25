@@ -26,7 +26,7 @@ export const UploadImage = (props) => {
   };
 
   return (
-    <ContainerComponent>
+    <ContainerComponent style={{ overflowY: "auto" }}>
       <FileDrop
         onDrop={(files, event) => {
           handleUploadFile(files);

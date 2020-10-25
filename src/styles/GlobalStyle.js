@@ -34,7 +34,7 @@ export const WrapperComponent = styled.div`
 
 export const ContainerComponent = styled.div`
   height: 100%;
-  padding: 15px;
+  padding: 10px;
 `;
 
 export const TextArea = styled.textarea`
@@ -54,4 +54,5 @@ export const Input = styled.input`
   outline: none;
   font-family: Poppins-Regular;
   color: #4f4f4f;
+  background: transparent;
 `;
