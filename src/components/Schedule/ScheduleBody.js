@@ -22,12 +22,15 @@ import {
   createSchedule,
   saveSchedule,
 } from "../../common/utils/handlerSchedule";
+import { Dialog, ModalScheduleConfirm } from "../Modal/";
+import { PreviewPost } from "../PreviewPost/PreviewPost";
 
 export const ScheduleBody = () => {
   const [socialNetworks, setSocialNetworks] = useState([]);
   const [text, setText] = useState("");
   const [imageFile, setImageFile] = useState({ file: "", src: "" });
   const [date, setDate] = useState({ date: "", time: "" });
+  const [openModal, setOpenModal] = useState(false);
 
   const handleSchedule = () => {
     let schedule = createSchedule(
@@ -38,6 +41,7 @@ export const ScheduleBody = () => {
       imageFile
     );
     if (schedule) saveSchedule(schedule);
+    setOpenModal((el) => true);
   };
 
   const checkForm = (socialNetworks, date, time, text, imageObj) => {
@@ -55,6 +59,9 @@ export const ScheduleBody = () => {
   };
   return (
     <Container>
+      <Dialog open={openModal}>
+        <ModalScheduleConfirm onClose={() => setOpenModal((el) => false)} />
+      </Dialog>
       <GridSchedule>
         <ContainerScheduleMenu>
           <div style={{ width: "100%", height: "100%" }}>
@@ -120,7 +127,7 @@ export const ScheduleBody = () => {
         <ContainerSchedulePreview>
           <WrapperComponent>
             <h1>Visualização do post</h1>
-            {date.date}
+            <PreviewPost socialNetworks={socialNetworks}></PreviewPost>
           </WrapperComponent>
         </ContainerSchedulePreview>
       </GridSchedule>
