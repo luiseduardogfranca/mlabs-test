@@ -7,7 +7,7 @@ import {
   GridSchedule,
   GridScheduleMenu,
   GridScheduleConfig,
-  ContainerScheduleSocialMedia,
+  ContainerScheduleSocialNetwork,
   ContainerScheduleDate,
   ContainerScheduleInput,
   ContainerScheduleUpload,
@@ -16,27 +16,17 @@ import {
 import { Container, WrapperComponent } from "../../styles/GlobalStyle";
 import { UploadImage } from "../UploadImage/";
 import { InputDate, InputText } from "../Input";
-import { MenuSocialMedia } from "../MenuSocialMedia/";
+import { MenuSocialNetwork } from "../MenuSocialNetwork/";
 
 export const ScheduleBody = () => {
-  const socialMedias = {
-    INSTAGRAM: false,
-    LINKEDIN: false,
-    YOUTUBE: false,
-    PINTEREST: false,
-    TWITTER: false,
-    FACEBOOK: false,
-  };
-
-  const [socialMediaSelected, setSocialMediaSelected] = useState(socialMedias);
+  const [socialNetworks, setSocialNetworks] = useState([]);
   const [text, setText] = useState("");
   const [imageFile, setImageFile] = useState({ file: "", src: "" });
   const [date, setDate] = useState({ date: "", time: "" });
 
-  // useEffect(() => {
-  //   if (imageFile) console.log(imageFile);
-  // }, [imageFile]);
-
+  useEffect(() => {
+    if (socialNetworks) console.log(socialNetworks);
+  }, [socialNetworks]);
   return (
     <Container>
       <GridSchedule>
@@ -45,14 +35,15 @@ export const ScheduleBody = () => {
             <GridScheduleMenu>
               <div>
                 <GridScheduleConfig>
-                  <ContainerScheduleSocialMedia>
+                  <ContainerScheduleSocialNetwork>
                     <WrapperComponent>
                       <h1>Redes Sociais</h1>
-                      <MenuSocialMedia
-                        socialMedias={setSocialMediaSelected}
-                      ></MenuSocialMedia>
+                      <MenuSocialNetwork
+                        arrSocialNetorks={socialNetworks}
+                        setSocialNetworks={setSocialNetworks}
+                      ></MenuSocialNetwork>
                     </WrapperComponent>
-                  </ContainerScheduleSocialMedia>
+                  </ContainerScheduleSocialNetwork>
                   <ContainerScheduleDate>
                     <WrapperComponent>
                       <h1>Data de publicação</h1>

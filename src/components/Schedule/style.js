@@ -35,7 +35,7 @@ export const GridScheduleConfig = styled.div`
   grid-area: Config;
   display: grid;
   height: 100%;
-  grid-template-areas: "SocialMedia Date";
+  grid-template-areas: "SocialNetwork Date";
   grid-template-columns: 48% 48%;
   justify-content: space-around;
 
@@ -59,8 +59,8 @@ export const ContainerSchedulePreview = styled.div`
     display: none;
 `;
 
-export const ContainerScheduleSocialMedia = styled.div`
-  grid-area: SocialMedia;
+export const ContainerScheduleSocialNetwork = styled.div`
+  grid-area: SocialNetwork;
 
   @media (max-width: 590px) {
     height: 110px;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerInputDate = styled.div`
   width: 40%;
-  height: 60%;
+  height: 50%;
   display: flex;
   flex-direction: row;
   align-items: center;

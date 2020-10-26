@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContainerButtonSocialMedia = styled.button`
+export const ContainerButtonSocialNetwork = styled.button`
   background: ${(props) =>
     props.disabled
       ? "#DDDDDD"
@@ -25,20 +25,31 @@ export const ContainerButtonSocialMedia = styled.button`
   }
 
   &:hover {
-    background: ${(props) => (props.disabled ? "#DDDDDD" : "#fff3e0")};
+    background: ${(props) =>
+      props.disabled
+        ? "#DDDDDD"
+        : props.checked
+        ? "linear-gradient(135deg, #EF9F2E 25%, #E02B4B 105.56%)"
+        : "#fff3e0"};
     border-color: ${(props) => (props.disabled ? "#9E9E9E" : "#ef9f2e")};
 
     svg,
     path {
-      fill: ${(props) => (props.disabled ? "#9E9E9E" : "#ef9f2e")};
+      fill: ${(props) =>
+        props.disabled ? "#9E9E9E" : props.checked ? "#FFFFFF" : "#ef9f2e"};
     }
   }
 `;
 
-export const IconSocialMedia = styled.div`
+export const IconSocialNetwork = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  svg {
+    height: 80%;
+    width: 80%;
+  }
 `;

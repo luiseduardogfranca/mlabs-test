@@ -1,4 +1,4 @@
 import { Button } from "./Button";
-import { ButtonSocialMedia } from "./ButtonSocialMedia/ButtonSocialMedia";
+import { ButtonSocialNetwork } from "./ButtonSocialNetwork/ButtonSocialNetwork";
 
-export { Button, ButtonSocialMedia };
+export { Button, ButtonSocialNetwork };
