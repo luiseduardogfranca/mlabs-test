@@ -17,6 +17,11 @@ import { Container, WrapperComponent } from "../../styles/GlobalStyle";
 import { UploadImage } from "../UploadImage/";
 import { InputDate, InputText } from "../Input";
 import { MenuSocialNetwork } from "../MenuSocialNetwork/";
+import { Footer } from "../Footer";
+import {
+  createSchedule,
+  saveSchedule,
+} from "../../common/utils/handlerSchedule";
 
 export const ScheduleBody = () => {
   const [socialNetworks, setSocialNetworks] = useState([]);
@@ -24,9 +29,30 @@ export const ScheduleBody = () => {
   const [imageFile, setImageFile] = useState({ file: "", src: "" });
   const [date, setDate] = useState({ date: "", time: "" });
 
-  useEffect(() => {
-    if (socialNetworks) console.log(socialNetworks);
-  }, [socialNetworks]);
+  const handleSchedule = () => {
+    let schedule = createSchedule(
+      socialNetworks,
+      date.date,
+      date.time,
+      text,
+      imageFile
+    );
+    if (schedule) saveSchedule(schedule);
+  };
+
+  const checkForm = (socialNetworks, date, time, text, imageObj) => {
+    if (
+      socialNetworks &&
+      socialNetworks.length > 0 &&
+      date &&
+      time &&
+      text &&
+      imageObj &&
+      imageObj.src
+    )
+      return true;
+    return false;
+  };
   return (
     <Container>
       <GridSchedule>
@@ -53,8 +79,8 @@ export const ScheduleBody = () => {
                           value={date.date}
                           typeDate
                           placeholder={"DD/MM/AAAA"}
-                          setValue={(target) =>
-                            setDate((el) => ({ ...el, date: target.value }))
+                          setValue={(value) =>
+                            setDate((el) => ({ ...el, date: value }))
                           }
                         ></InputDate>
                         <InputDate
@@ -62,8 +88,8 @@ export const ScheduleBody = () => {
                           value={date.time}
                           typeTime
                           placeholder="HH:MM"
-                          setValue={(target) =>
-                            setDate((el) => ({ ...el, time: target.value }))
+                          setValue={(value) =>
+                            setDate((el) => ({ ...el, time: value }))
                           }
                         ></InputDate>
                       </ContainerInput>
@@ -94,10 +120,16 @@ export const ScheduleBody = () => {
         <ContainerSchedulePreview>
           <WrapperComponent>
             <h1>Visualização do post</h1>
-            {text}
+            {date.date}
           </WrapperComponent>
         </ContainerSchedulePreview>
       </GridSchedule>
+      <Footer
+        handleSchedule={() => handleSchedule()}
+        scheduleDisabled={
+          !checkForm(socialNetworks, date.date, date.time, text, imageFile)
+        }
+      />
     </Container>
   );
 };

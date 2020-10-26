@@ -13,7 +13,7 @@ export const InputDate = (props) => {
   const { value, setValue, typeDate, typeTime } = props;
 
   const handleUpdateValue = (value) => {
-    if (setValue) setValue((el) => value);
+    if (setValue) setValue(value);
   };
 
   return (
@@ -25,9 +25,9 @@ export const InputDate = (props) => {
         <InputMask
           mask={typeDate ? "99/99/9999" : typeTime ? "99:99" : null}
           value={value}
-          onChange={(ev) =>
-            ev.target && ev.target.value
-              ? handleUpdateValue(ev.target.value)
+          onChange={({ target }) =>
+            target && target.value
+              ? handleUpdateValue(target.value)
               : handleUpdateValue("")
           }
         >

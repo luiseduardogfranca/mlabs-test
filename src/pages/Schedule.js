@@ -6,7 +6,6 @@ const Schedule = () => {
   return (
     <>
       <ScheduleBody />
-      <Footer />
     </>
   );
 };

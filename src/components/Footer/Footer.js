@@ -7,7 +7,8 @@ import { Button } from "../Button";
 import { Link, useHistory } from "react-router-dom";
 import { api } from "../../api/api";
 
-export const Footer = () => {
+export const Footer = (props) => {
+  const { handleSchedule, scheduleDisabled } = props;
   const history = useHistory();
 
   return (
@@ -21,7 +22,12 @@ export const Footer = () => {
         ></Button>
 
         <Button color={"blue"} outline label={"Rascunho"}></Button>
-        <Button color={"blue"} label={"Agendar"}></Button>
+        <Button
+          onClick={handleSchedule}
+          color={"blue"}
+          label={"Agendar"}
+          disabled={scheduleDisabled}
+        ></Button>
       </ContainerContent>
     </ContainerFooter>
   );
