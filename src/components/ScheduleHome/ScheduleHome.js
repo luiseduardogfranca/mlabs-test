@@ -8,7 +8,7 @@ export const ScheduleHome = () => {
   const history = useHistory();
 
   return (
-    <ontainerHome>
+    <ContainerHome>
       <ContainerFlexHome>
         <img src={PostImage}></img>
         <Button
@@ -17,6 +17,6 @@ export const ScheduleHome = () => {
           label={"Agendar post"}
         ></Button>
       </ContainerFlexHome>
-    </ontainerHome>
+    </ContainerHome>
   );
 };

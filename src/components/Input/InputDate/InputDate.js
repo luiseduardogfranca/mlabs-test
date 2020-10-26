@@ -23,7 +23,7 @@ export const InputDate = (props) => {
       </AdormentLeft>
       <InputRight>
         <InputMask
-          mask={typeDate ? "99/99" : typeTime ? "99:99" : null}
+          mask={typeDate ? "99/99/9999" : typeTime ? "99:99" : null}
           value={value}
           onChange={(ev) =>
             ev.target && ev.target.value

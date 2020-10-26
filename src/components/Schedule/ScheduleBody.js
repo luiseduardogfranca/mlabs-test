@@ -52,7 +52,7 @@ export const ScheduleBody = () => {
                           id={"input-date"}
                           value={date.date}
                           typeDate
-                          placeholder={"DD/MM"}
+                          placeholder={"DD/MM/AAAA"}
                           setValue={(target) =>
                             setDate((el) => ({ ...el, date: target.value }))
                           }

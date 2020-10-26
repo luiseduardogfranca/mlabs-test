@@ -5,6 +5,7 @@ import LogoMlabs from "../../assets/icons/logo.svg";
 import MenuIcon from "../../assets/icons/bars.svg";
 import { Button } from "../Button";
 import { Link, useHistory } from "react-router-dom";
+import { api } from "../../api/api";
 
 export const Footer = () => {
   const history = useHistory();

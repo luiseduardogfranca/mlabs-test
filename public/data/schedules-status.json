@@ -1,0 +1,24 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "name": "Agendado",
+        "color": "#2F80ED"
+      },
+      {
+        "id": 2,
+        "name": "Postado",
+        "color": "#27AE60"
+      },
+      {
+        "id": 3,
+        "name": "Não aprovado",
+        "color": "#F2C94C"
+      },
+      {
+        "id": 4,
+        "name": "Postado com ressalvas",
+        "color": "#EB5757"
+      }
+    ]
+  }
