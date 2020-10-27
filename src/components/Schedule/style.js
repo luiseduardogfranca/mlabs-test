@@ -90,7 +90,21 @@ export const ContainerScheduleUpload = styled.div`
   grid-area: Upload;
   @media (max-width: 590px) {
     flex-grow: 1;
+  }
+`;
+
+export const ContainerPreviewButton = styled.div`
+  display: none;
+
+  @media (max-width: 590px) {
+    margin-top: 10px;
+    display: block;
+    flex-grow: 1;
     margin-bottom: calc(var(--height-footbar) + 10px);
+
+    button {
+      width: 100%;
+    }
   }
 `;
 

@@ -12,6 +12,7 @@ import {
   ContainerScheduleInput,
   ContainerScheduleUpload,
   ContainerInput,
+  ContainerPreviewButton,
 } from "./style";
 import { Container, WrapperComponent } from "../../styles/GlobalStyle";
 import { UploadImage } from "../UploadImage/";
@@ -136,6 +137,9 @@ export const ScheduleBody = () => {
                   <UploadImage setImageFile={setImageFile}></UploadImage>
                 </WrapperComponent>
               </ContainerScheduleUpload>
+              <ContainerPreviewButton>
+                <Button color={"orange"} label={"Visualizar post"}></Button>
+              </ContainerPreviewButton>
             </GridScheduleMenu>
           </div>
         </ContainerScheduleMenu>

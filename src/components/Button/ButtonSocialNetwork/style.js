@@ -18,6 +18,7 @@ export const ContainerButtonSocialNetwork = styled.button`
   outline: none;
   cursor: pointer;
   transition: background 300ms;
+  padding: 0;
 
   svg path {
     fill: ${(props) =>
@@ -42,14 +43,15 @@ export const ContainerButtonSocialNetwork = styled.button`
 `;
 
 export const IconSocialNetwork = styled.div`
-  height: 100%;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 
+  width: 33px;
+  height: 33px;
+
   svg {
     height: 80%;
-    width: 80%;
+    width: 50%;
   }
 `;
