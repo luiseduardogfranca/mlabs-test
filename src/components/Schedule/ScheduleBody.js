@@ -127,7 +127,11 @@ export const ScheduleBody = () => {
         <ContainerSchedulePreview>
           <WrapperComponent>
             <h1>Visualização do post</h1>
-            <PreviewPost socialNetworks={socialNetworks}></PreviewPost>
+            <PreviewPost
+              image={imageFile.src}
+              text={text}
+              socialNetworks={socialNetworks}
+            ></PreviewPost>
           </WrapperComponent>
         </ContainerSchedulePreview>
       </GridSchedule>

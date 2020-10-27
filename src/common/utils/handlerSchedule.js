@@ -33,7 +33,6 @@ export const saveSchedule = (scheduleObj) => {
   let arrSchedules = JSON.parse(localStorage.getItem(SCHEDULE_NAME_TABLE));
 
   if (arrSchedules) {
-    console.log(arrSchedules);
     localStorage.setItem(
       SCHEDULE_NAME_TABLE,
       JSON.stringify([...arrSchedules, scheduleObj])

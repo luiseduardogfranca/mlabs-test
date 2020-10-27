@@ -6,16 +6,17 @@ import {
 } from "./style";
 import CardEmpty from "../../assets/image/post-preview.svg";
 import { Button } from "../Button";
+import { CardIntagram } from "./CardInstagram";
 
 export const PreviewPost = (props) => {
-  const { socialNetworks } = props;
+  const { socialNetworks, image, text } = props;
 
   return (
     <div style={{ width: "100%", height: "100%" }}>
       {socialNetworks && socialNetworks.length && socialNetworks.length > 0 ? (
         <ContainerPreviewPost>
           {socialNetworks.map((el, key) => (
-            <ContainerCard></ContainerCard>
+            <CardIntagram image={image} text={text}></CardIntagram>
           ))}
         </ContainerPreviewPost>
       ) : (

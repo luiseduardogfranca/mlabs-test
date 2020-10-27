@@ -8,17 +8,101 @@ export const ContainerPreviewPost = styled.div`
   align-items: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
-  overflow-x: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
 `;
 
 export const ContainerCard = styled.div`
-  height: 80%;
-  width: 360px;
-  margin: 20px;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  height: 90%;
+  width: 360px;
+  margin: 0 20px;
   align-items: center;
-  background: grey;
+  justify-content: space-between;
+
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+`;
+
+export const CardIntagramHeader = styled.div`
+  display: flex;
+  height: 15%;
+  width: 90%;
+`;
+export const CardIntagramBody = styled.div`
+  width: 100%;
+  height: 60%;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+`;
+
+export const CardIntagramFooter = styled.div`
+  height: 20%;
+  width: 95%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    font-family: Poppins-Regular;
+    font-size: 0.8em;
+    line-break: anywhere;
+  }
+`;
+
+export const CardImage = styled.div`
+  background-image: ${(props) => `url("${props.image}")`};
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+`;
+
+export const AvatarInstagram = styled.div`
+  display: flex;
+  align-items: center;
+  p {
+    margin-left: 10px;
+    font-size: 0.8em;
+  }
+`;
+
+export const ImageAvatar = styled.div`
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background: ${(props) =>
+    props.instagram
+      ? "linear-gradient(187.5deg, #ef2ea2 5.81%, #e0a22b 109.34%)"
+      : "#2E92EF"};
+  border: 1px solid #ef2ea2;
+  border-color: ${(props) => (props.instagram ? "#ef2ea2" : "#2E92EF")};
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 50%;
+    height: 70%;
+  }
+
+  svg,
+  path {
+    fill: #ffffff;
+  }
+`;
+
+export const ActionsInstagram = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  img {
+    margin: 0 10px;
+  }
 `;
 
 export const ContainerCardEmpty = styled.div`
@@ -39,5 +123,6 @@ export const ContainerCardEmpty = styled.div`
 
   img {
     height: 70%;
+    width: 50%;
   }
 `;
