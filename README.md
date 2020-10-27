@@ -11,6 +11,7 @@ Posting Scheduling application: [https://scheduling-mlabs.herokuapp.com/](https:
 ## Depedencies
 
 - ReactJS
+- date-fns
 - styled-components
 - react-router-dom
 - react-file-drop

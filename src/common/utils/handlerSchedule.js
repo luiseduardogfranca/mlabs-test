@@ -32,15 +32,24 @@ export const createSchedule = (socialNetworks, date, time, text, imageObj) => {
 export const saveSchedule = (scheduleObj) => {
   let arrSchedules = JSON.parse(localStorage.getItem(SCHEDULE_NAME_TABLE));
 
-  if (arrSchedules) {
-    localStorage.setItem(
-      SCHEDULE_NAME_TABLE,
-      JSON.stringify([...arrSchedules, scheduleObj])
-    );
+  if (arrSchedules && scheduleObj) {
+    let query = arrSchedules.filter((el) => el.id == scheduleObj.id);
+    if (query && query.length == 0)
+      localStorage.setItem(
+        SCHEDULE_NAME_TABLE,
+        JSON.stringify([...arrSchedules, scheduleObj])
+      );
   } else {
     if (scheduleObj)
       localStorage.setItem(SCHEDULE_NAME_TABLE, JSON.stringify([scheduleObj]));
   }
 };
 
-export const removeSchedule = () => {};
+export const getSchedules = () => {
+  let arrSchedules = JSON.parse(localStorage.getItem(SCHEDULE_NAME_TABLE));
+  return arrSchedules;
+};
+
+export const clearDatabase = () => {
+  localStorage.clear();
+};

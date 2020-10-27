@@ -19,6 +19,7 @@ export const ContainerContent = styled.div`
 
 export const LogoNavbar = styled.img`
   width: 110px;
+  cursor: pointer;
   @media (max-width: 590px) {
     display: none;
   }
@@ -26,7 +27,7 @@ export const LogoNavbar = styled.img`
 
 export const MenuNavbar = styled.img`
   width: 22px;
-
+  cursor: pointer;
   @media (min-width: 590px) {
     display: none;
   }

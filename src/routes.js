@@ -4,6 +4,7 @@ import { AppWrapper } from "./AppWrapper";
 
 const HomePageLazy = React.lazy(() => import("./pages/HomePage.js"));
 const ScheduleLazy = React.lazy(() => import("./pages/Schedule.js"));
+const ScheduleListLazy = React.lazy(() => import("./pages/ScheduleList.js"));
 
 export const Routes = () => {
   return (
@@ -14,9 +15,14 @@ export const Routes = () => {
             <HomePageLazy />
           </AppWrapper>
         </Route>
-        <Route exact path="/scheduling">
+        <Route path="/scheduling">
           <AppWrapper>
             <ScheduleLazy />
+          </AppWrapper>
+        </Route>
+        <Route path="/schedule-list">
+          <AppWrapper>
+            <ScheduleListLazy />
           </AppWrapper>
         </Route>
       </Switch>

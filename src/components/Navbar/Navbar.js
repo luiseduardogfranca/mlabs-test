@@ -8,13 +8,22 @@ import {
 } from "./style";
 import LogoMlabs from "../../assets/icons/logo.svg";
 import MenuIcon from "../../assets/icons/bars.svg";
+import { useHistory } from "react-router-dom";
 
 export const Navbar = () => {
+  const history = useHistory();
+
   return (
     <ContainerNavbar>
       <ContainerContent>
-        <LogoNavbar src={LogoMlabs}></LogoNavbar>
-        <MenuNavbar src={MenuIcon}></MenuNavbar>
+        <LogoNavbar
+          onClick={() => history.push("/")}
+          src={LogoMlabs}
+        ></LogoNavbar>
+        <MenuNavbar
+          onClick={() => history.push("/")}
+          src={MenuIcon}
+        ></MenuNavbar>
         <Avatar />
       </ContainerContent>
     </ContainerNavbar>

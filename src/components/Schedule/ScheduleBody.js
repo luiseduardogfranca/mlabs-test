@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "../Button";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import {
   ContainerScheduleMenu,
   ContainerSchedulePreview,
@@ -32,6 +32,8 @@ export const ScheduleBody = () => {
   const [date, setDate] = useState({ date: "", time: "" });
   const [openModal, setOpenModal] = useState(false);
 
+  const history = useHistory();
+
   const handleSchedule = () => {
     let schedule = createSchedule(
       socialNetworks,
@@ -60,7 +62,12 @@ export const ScheduleBody = () => {
   return (
     <Container>
       <Dialog open={openModal}>
-        <ModalScheduleConfirm onClose={() => setOpenModal((el) => false)} />
+        <ModalScheduleConfirm
+          onClose={() => {
+            setOpenModal((el) => false);
+            history.push("/schedule-list");
+          }}
+        />
       </Dialog>
       <GridSchedule>
         <ContainerScheduleMenu>
