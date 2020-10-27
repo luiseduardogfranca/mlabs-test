@@ -1,42 +1,39 @@
 import React, { useState, useEffect } from "react";
 import {
-  ActionsInstagram,
   CardIntagramBody,
   CardIntagramFooter,
   CardIntagramHeader,
   ContainerCard,
-  ContainerDialog,
-  DialogContent,
-  WrapperDialogContent,
-  ActionsRight,
-  ActionsLeft,
   CardImage,
-  AvatarInstagram,
+  ActionsCard,
   ImageAvatar,
+  AvatarName,
+  CardAvatar,
 } from "./style";
 import CommentIcon from "../../assets/icons/comment-instagram.svg";
 import BookmarkIcon from "../../assets/icons/bookmark-instagram.svg";
 import HeartIcon from "../../assets/icons/heart-instagram.svg";
 import { ReactComponent as InstagramIcon } from "../../assets/icons/instagram.svg";
-import { ReactComponent as LinkedinIcon } from "../../assets/icons/linkedin.svg";
 
 export const CardIntagram = (props) => {
-  const { image, text, dateTime } = props;
+  const { image, text, date } = props;
   return (
     <ContainerCard>
       <CardIntagramHeader>
-        <AvatarInstagram>
+        <CardAvatar>
           <ImageAvatar instagram>
             <InstagramIcon />
           </ImageAvatar>
-          <p>Anselmo Carlos</p>
-        </AvatarInstagram>
+          <AvatarName>
+            <h1>Anselmo Carlos</h1>
+          </AvatarName>
+        </CardAvatar>
       </CardIntagramHeader>
       <CardIntagramBody>
         <CardImage image={image} />
       </CardIntagramBody>
       <CardIntagramFooter>
-        <ActionsInstagram>
+        <ActionsCard>
           <div>
             <img src={HeartIcon}></img>
             <img src={CommentIcon}></img>
@@ -44,7 +41,7 @@ export const CardIntagram = (props) => {
           <div>
             <img src={BookmarkIcon}></img>
           </div>
-        </ActionsInstagram>
+        </ActionsCard>
         <p>{text}</p>
       </CardIntagramFooter>
     </ContainerCard>

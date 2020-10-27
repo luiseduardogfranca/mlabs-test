@@ -30,6 +30,13 @@ export const CardIntagramHeader = styled.div`
   height: 15%;
   width: 90%;
 `;
+
+export const CardLinkedinHeader = styled.div`
+  display: flex;
+  height: 15%;
+  width: 90%;
+`;
+
 export const CardIntagramBody = styled.div`
   width: 100%;
   height: 60%;
@@ -37,6 +44,49 @@ export const CardIntagramBody = styled.div`
   img {
     height: 100%;
     width: 100%;
+  }
+`;
+
+export const CardLinkedinBody = styled.div`
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    margin: 0;
+    overflow: hidden;
+    height: 5%;
+    width: 90%;
+    margin-bottom: 10px;
+    font-family: Poppins-Regular;
+    font-size: 0.8em;
+    line-break: anywhere;
+  }
+`;
+
+export const CardLinkedinFooter = styled.div`
+  height: 15%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  hr {
+    width: 100%;
+    height: 1px;
+    background: "#BDBDBD";
+  }
+
+  p {
+    font-family: Poppins-Regular;
+    color: #828282;
+    font-size: 0.8em;
+    margin: 0;
+    width: 90%;
   }
 `;
 
@@ -62,12 +112,27 @@ export const CardImage = styled.div`
   width: 100%;
 `;
 
-export const AvatarInstagram = styled.div`
+export const CardAvatar = styled.div`
   display: flex;
   align-items: center;
-  p {
-    margin-left: 10px;
+`;
+
+export const AvatarName = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+
+  h1 {
     font-size: 0.8em;
+    border: none;
+    padding: 0;
+  }
+
+  p {
+    font-size: 0.7em;
+    font-family: Poppins-Regular;
+    color: #828282;
+    margin: 0;
   }
 `;
 
@@ -96,7 +161,7 @@ export const ImageAvatar = styled.div`
   }
 `;
 
-export const ActionsInstagram = styled.div`
+export const ActionsCard = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;

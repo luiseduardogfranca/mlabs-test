@@ -130,6 +130,7 @@ export const ScheduleBody = () => {
             <PreviewPost
               image={imageFile.src}
               text={text}
+              date={date}
               socialNetworks={socialNetworks}
             ></PreviewPost>
           </WrapperComponent>
