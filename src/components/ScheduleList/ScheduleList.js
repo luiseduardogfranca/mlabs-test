@@ -39,7 +39,8 @@ export const ScheduleList = () => {
   }
 
   if (schedules && schedules.length == 0) {
-    setSchedules((el) => [...getSchedules()]);
+    let schedulesData = getSchedules();
+    if (schedulesData) setSchedules((el) => [...schedulesData]);
   }
 
   return (

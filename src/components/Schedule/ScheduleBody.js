@@ -21,6 +21,7 @@ import { Footer } from "../Footer";
 import {
   createSchedule,
   saveSchedule,
+  clearDatabase,
 } from "../../common/utils/handlerSchedule";
 import { Dialog, ModalScheduleConfirm } from "../Modal/";
 import { PreviewPost } from "../PreviewPost/PreviewPost";
@@ -42,8 +43,16 @@ export const ScheduleBody = () => {
       text,
       imageFile
     );
-    if (schedule) saveSchedule(schedule);
-    setOpenModal((el) => true);
+    if (schedule) {
+      if (saveSchedule(schedule)) {
+        setOpenModal((el) => true);
+      } else {
+        let res = window.confirm(
+          "Opss, você chegou ao seu limites de agendamento, você deseja limpar o banco?"
+        );
+        if (res) clearDatabase();
+      }
+    }
   };
 
   const checkForm = (socialNetworks, date, time, text, imageObj) => {

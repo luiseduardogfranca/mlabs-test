@@ -1,3 +1,4 @@
+import { ca } from "date-fns/locale";
 import { SCHEDULE_NAME_TABLE } from "../../database";
 import { converteDateTime } from "./convertDateTime";
 
@@ -35,14 +36,30 @@ export const saveSchedule = (scheduleObj) => {
   if (arrSchedules && scheduleObj) {
     let query = arrSchedules.filter((el) => el.id == scheduleObj.id);
     if (query && query.length == 0)
-      localStorage.setItem(
-        SCHEDULE_NAME_TABLE,
-        JSON.stringify([...arrSchedules, scheduleObj])
-      );
+      try {
+        localStorage.setItem(
+          SCHEDULE_NAME_TABLE,
+          JSON.stringify([...arrSchedules, scheduleObj])
+        );
+        return true;
+      } catch (err) {
+        console.log(err);
+      }
   } else {
-    if (scheduleObj)
-      localStorage.setItem(SCHEDULE_NAME_TABLE, JSON.stringify([scheduleObj]));
+    if (scheduleObj) {
+      try {
+        localStorage.setItem(
+          SCHEDULE_NAME_TABLE,
+          JSON.stringify([scheduleObj])
+        );
+        return true;
+      } catch (err) {
+        console.log(err);
+      }
+    }
   }
+
+  return false;
 };
 
 export const getSchedules = () => {
