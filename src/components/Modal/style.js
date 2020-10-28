@@ -61,6 +61,9 @@ export const ContainerModalPreview = styled.div`
     border: 1px #bdbdbd solid;
     border-radius: 4px;
 
+    animation: bounceInUp;
+    animation-duration: 1s;
+
     display: flex;
     align-self: flex-end;
     justify-content: space-evenly;
