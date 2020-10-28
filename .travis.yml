@@ -3,5 +3,3 @@ node_js:
   - 14
 install:
   - npm install
-script:
-  - npm test
