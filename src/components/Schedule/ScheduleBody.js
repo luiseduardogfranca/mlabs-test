@@ -84,7 +84,7 @@ export const ScheduleBody = () => {
           }}
         />
       </Dialog>
-      <Dialog open={openPreview}>
+      <Dialog transparent open={openPreview}>
         <ModalPreview
           onClose={() => {
             setOpenPreview((el) => false);

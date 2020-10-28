@@ -5,7 +5,7 @@ import { Button } from "../Button";
 
 export const Dialog = (props) => {
   return (
-    <ContainerDialog open={props.open}>
+    <ContainerDialog transparent={props.transparent} open={props.open}>
       {props.onClose && (
         <Button label={"fechar"} onClick={props.onClose}></Button>
       )}

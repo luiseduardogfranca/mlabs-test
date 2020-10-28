@@ -192,6 +192,7 @@ export const ContainerCardEmpty = styled.div`
   flex-direction: column;
 
   h1 {
+    font-size: 1.2em;
     width: 60%;
     text-align: center;
     border: none;
