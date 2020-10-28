@@ -58,8 +58,12 @@ export const getTextOfDate = (date) => {
 };
 
 export const convertSPublicationDateToText = (dateTime) => {
-  let newDate = format(new Date(dateTime), "dd/MM/yyyy");
-  let newTime = format(new Date(dateTime), "HH:mm");
+  if (dateTime) {
+    let newDate = format(new Date(dateTime), "dd/MM/yyyy");
+    let newTime = format(new Date(dateTime), "HH:mm");
 
-  return `${newDate} às ${newTime}h`;
+    return `${newDate} às ${newTime}h`;
+  }
+
+  return null;
 };
