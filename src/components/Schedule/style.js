@@ -13,6 +13,8 @@ export const GridSchedule = styled.div`
     height: 90%;
     width: 90%;
     align-self: center;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 `;
 
@@ -100,7 +102,6 @@ export const ContainerPreviewButton = styled.div`
     margin-top: 10px;
     display: block;
     flex-grow: 1;
-    margin-bottom: calc(var(--height-footbar) + 10px);
 
     button {
       width: 100%;
