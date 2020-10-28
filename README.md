@@ -18,7 +18,7 @@ Posting Scheduling application: [https://scheduling-mlabs.herokuapp.com/](https:
 
 ### CI/CD
 
-This project use Travis to Continuos Integration and Heroku to deploy. After tests passed by Travis, the main branch is pushed and deployed in Heroku plataform.
+This project use Heroku to Continuos Delivery. After the main branch is pushed and deployed in Heroku plataform.
 
 Note: The free dynos enter the sleep mode after time, so there may be a small dalay at the start of the application.
 
