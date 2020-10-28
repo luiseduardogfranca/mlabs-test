@@ -16,19 +16,32 @@ export const WrapperComponent = styled.div`
   background: #ffffff;
   border-radius: 4px;
   border: 1px solid #e0e0e0;
-
-  h1 {
-    margin: 0;
-    padding: 5px 10px;
-    font-family: Poppins-Regular;
-    font-size: 0.8em;
-    border-bottom: 1px solid #e0e0e0;
-    color: #333333;
-  }
+  overflow-y: ${(props) => (props.overflowY ? "auto" : "hidden")};
 
   .file-drop-target,
   .file-drop {
     height: 100%;
+  }
+`;
+
+export const TitleComponent = styled.div`
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+
+  h1 {
+    margin: 0;
+    font-family: Poppins-Regular;
+    font-size: 0.8em;
+    color: #333333;
+    margin: 10px;
+    margin-right: auto;
+  }
+
+  button {
+    margin: 10px;
+    margin-left: auto;
   }
 `;
 

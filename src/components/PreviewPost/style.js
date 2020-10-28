@@ -10,6 +10,12 @@ export const ContainerPreviewPost = styled.div`
   flex-wrap: wrap;
   overflow-x: auto;
   overflow-y: hidden;
+
+  @media (max-width: 590px) {
+    flex-direction: row;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 `;
 
 export const ContainerCard = styled.div`
@@ -23,6 +29,12 @@ export const ContainerCard = styled.div`
 
   border: 1px solid #bdbdbd;
   border-radius: 4px;
+
+  @media (max-width: 590px) {
+    height: 535px;
+    width: 90%;
+    margin: 20px;
+  }
 `;
 
 export const CardIntagramHeader = styled.div`
@@ -189,5 +201,16 @@ export const ContainerCardEmpty = styled.div`
   img {
     height: 70%;
     width: 50%;
+  }
+
+  @media (max-width: 590px) {
+    h1 {
+      width: 90%;
+    }
+
+    img {
+      height: 70%;
+      width: 60%;
+    }
   }
 `;

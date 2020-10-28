@@ -50,3 +50,36 @@ export const ContainerModalSchedule = styled.div`
     }
   }
 `;
+
+export const ContainerModalPreview = styled.div`
+  display: none;
+
+  @media (max-width: 590px) {
+    height: calc(100vh - var(--height-navbar));
+    width: 100vw;
+    background: #fafafa;
+    border: 1px #bdbdbd solid;
+    border-radius: 4px;
+
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-size: 1.2em;
+    }
+  }
+`;
+
+export const ContainerModalPreviewCard = styled.div`
+  display: none;
+
+  @media (max-width: 590px) {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+`;

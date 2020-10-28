@@ -14,7 +14,11 @@ import {
   ContainerInput,
   ContainerPreviewButton,
 } from "./style";
-import { Container, WrapperComponent } from "../../styles/GlobalStyle";
+import {
+  Container,
+  TitleComponent,
+  WrapperComponent,
+} from "../../styles/GlobalStyle";
 import { UploadImage } from "../UploadImage/";
 import { InputDate, InputText } from "../Input";
 import { MenuSocialNetwork } from "../MenuSocialNetwork/";
@@ -24,7 +28,7 @@ import {
   saveSchedule,
   clearDatabase,
 } from "../../common/utils/handlerSchedule";
-import { Dialog, ModalScheduleConfirm } from "../Modal/";
+import { Dialog, ModalPreview, ModalScheduleConfirm } from "../Modal/";
 import { PreviewPost } from "../PreviewPost/PreviewPost";
 
 export const ScheduleBody = () => {
@@ -33,6 +37,7 @@ export const ScheduleBody = () => {
   const [imageFile, setImageFile] = useState({ file: "", src: "" });
   const [date, setDate] = useState({ date: "", time: "" });
   const [openModal, setOpenModal] = useState(false);
+  const [openPreview, setOpenPreview] = useState(false);
 
   const history = useHistory();
 
@@ -79,6 +84,20 @@ export const ScheduleBody = () => {
           }}
         />
       </Dialog>
+      <Dialog open={openPreview}>
+        <ModalPreview
+          onClose={() => {
+            setOpenPreview((el) => false);
+          }}
+        >
+          <PreviewPost
+            image={imageFile.src}
+            text={text}
+            date={date}
+            socialNetworks={socialNetworks}
+          ></PreviewPost>
+        </ModalPreview>
+      </Dialog>
       <GridSchedule>
         <ContainerScheduleMenu>
           <div style={{ width: "100%", height: "100%" }}>
@@ -87,7 +106,9 @@ export const ScheduleBody = () => {
                 <GridScheduleConfig>
                   <ContainerScheduleSocialNetwork>
                     <WrapperComponent>
-                      <h1>Redes Sociais</h1>
+                      <TitleComponent>
+                        <h1>Redes Sociais</h1>
+                      </TitleComponent>
                       <MenuSocialNetwork
                         arrSocialNetorks={socialNetworks}
                         setSocialNetworks={setSocialNetworks}
@@ -96,7 +117,9 @@ export const ScheduleBody = () => {
                   </ContainerScheduleSocialNetwork>
                   <ContainerScheduleDate>
                     <WrapperComponent>
-                      <h1>Data de publicação</h1>
+                      <TitleComponent>
+                        <h1>Data de publicação</h1>
+                      </TitleComponent>
                       <ContainerInput>
                         <InputDate
                           id={"input-date"}
@@ -123,7 +146,9 @@ export const ScheduleBody = () => {
               </div>
               <ContainerScheduleInput>
                 <WrapperComponent>
-                  <h1>Texto do post</h1>
+                  <TitleComponent>
+                    <h1>Texto do post</h1>
+                  </TitleComponent>
                   <InputText
                     placeholder={"Aqui vai o texto descritivo desse post"}
                     setText={setText}
@@ -133,12 +158,18 @@ export const ScheduleBody = () => {
 
               <ContainerScheduleUpload>
                 <WrapperComponent>
-                  <h1>Upload do post</h1>
+                  <TitleComponent>
+                    <h1>Upload do post</h1>
+                  </TitleComponent>
                   <UploadImage setImageFile={setImageFile}></UploadImage>
                 </WrapperComponent>
               </ContainerScheduleUpload>
               <ContainerPreviewButton>
-                <Button color={"orange"} label={"Visualizar post"}></Button>
+                <Button
+                  onClick={() => setOpenPreview((el) => true)}
+                  color={"orange"}
+                  label={"Visualizar post"}
+                ></Button>
               </ContainerPreviewButton>
             </GridScheduleMenu>
           </div>
@@ -146,7 +177,9 @@ export const ScheduleBody = () => {
 
         <ContainerSchedulePreview>
           <WrapperComponent>
-            <h1>Visualização do post</h1>
+            <TitleComponent>
+              <h1>Visualização do post</h1>
+            </TitleComponent>
             <PreviewPost
               image={imageFile.src}
               text={text}
