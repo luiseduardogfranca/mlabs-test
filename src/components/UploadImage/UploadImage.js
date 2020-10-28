@@ -5,6 +5,7 @@ import { ContainerComponent } from "../../styles/GlobalStyle";
 import UploadIcon from "../../assets/icons/upload.svg";
 import { InputFile } from "../Input/";
 import { FileDrop } from "react-file-drop";
+import { checkExtensionFile } from "../../common/utils/checkExtensionFile";
 
 export const UploadImage = (props) => {
   const { setImageFile } = props;
@@ -16,12 +17,18 @@ export const UploadImage = (props) => {
       setImageFile !== undefined
     ) {
       let file = files[0];
-      setImageFile((el) => ({ ...el, file: file }));
+      if (checkExtensionFile(file.name)) {
+        setImageFile((el) => ({ ...el, file: file }));
 
-      let reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onloadend = () =>
-        setImageFile((el) => ({ ...el, src: reader.result }));
+        let reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onloadend = () =>
+          setImageFile((el) => ({ ...el, src: reader.result }));
+      } else {
+        alert(
+          "Formato de arquivo inválido. Apenas os seguintes formatos são aceitos: .jpeg, .jpg e .png!"
+        );
+      }
     }
   };
 
