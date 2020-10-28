@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { sortByStatusAsc } from "../../common/utils/sortByStatus";
+import { sortByStatusAsc } from "../../common/utils/sortBy";
 import { getAllSocialNetworks } from "../../services/SocialNetwork";
 import { ButtonSocialNetwork } from "../Button";
 import { ContainerMenu } from "./style";

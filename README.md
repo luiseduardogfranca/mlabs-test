@@ -18,7 +18,7 @@ Posting Scheduling application: [https://scheduling-mlabs.herokuapp.com/](https:
 
 ### CI/CD
 
-This project use Travis to Continuos Integration and Heroku to deploy. After tests passed by Travis, the main branch is pushed and deployed in Heroku plataform.
+This project use Heroku to Continuos Delivery. After the main branch is pushed and deployed in Heroku plataform.
 
 Note: The free dynos enter the sleep mode after time, so there may be a small dalay at the start of the application.
 
@@ -69,3 +69,20 @@ $  npm start
 # Open application in your browser:
 localhost:3000
 ```
+
+### Features
+
+- [x] selection of many social network
+- [x] date field
+- [x] time field
+- [x] DragAndDrop component to image upload
+- [x] Preview on desktop
+- [x] Preview on mobile
+- [x] Schedule page responsive
+- [x] Schedule table page responsive
+- [x] social network button
+- [x] request of social networks from API
+- [x] request of schedule status from API
+- [x] request of schedules from API
+- [x] storage all schedules in localStorage
+- [x] sort schedules in table by date (ASC and DESC)

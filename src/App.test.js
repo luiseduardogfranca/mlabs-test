@@ -6,6 +6,10 @@ import {
   convertSPublicationDateToText,
   getTextOfDate,
 } from "./common/utils/convertDateTime";
+import {
+  sortSchedulesByDateAsc,
+  sortSchedulesByDateDesc,
+} from "./common/utils/sortBy";
 
 // test('renders learn react link', () => {
 //   const { getByText } = render(<App />);
@@ -65,4 +69,76 @@ test("convertSPublicationDateToText method when right date shouldn't return a er
   let dateTimeText = convertSPublicationDateToText(null);
 
   expect(dateTimeText).toBeNull();
+});
+
+test("sortSchedulesByDateAsc method when ordered correctly shouldn't return a error", () => {
+  let dateTimeA = new Date(2020, 11, 20, 12, 50);
+  let dateTimeB = new Date(2020, 11, 20, 12, 40);
+  let dateTimeC = new Date(2020, 11, 19, 12, 50);
+
+  let dateTimeArr = [
+    { publication_date: dateTimeA },
+    { publication_date: dateTimeB },
+    { publication_date: dateTimeC },
+  ];
+
+  let arrOrdered = sortSchedulesByDateAsc(dateTimeArr, "publication_date");
+
+  expect(arrOrdered).toEqual([
+    { publication_date: dateTimeC },
+    { publication_date: dateTimeB },
+    { publication_date: dateTimeA },
+  ]);
+});
+
+test("sortSchedulesByDateAsc method when key is null should return null", () => {
+  let dateTimeA = new Date(2020, 11, 20, 12, 50);
+  let dateTimeB = new Date(2020, 11, 20, 12, 40);
+  let dateTimeC = new Date(2020, 11, 19, 12, 50);
+
+  let dateTimeArr = [
+    { publication_date: dateTimeA },
+    { publication_date: dateTimeB },
+    { publication_date: dateTimeC },
+  ];
+
+  let arrOrdered = sortSchedulesByDateAsc(dateTimeArr);
+
+  expect(arrOrdered).toBeNull();
+});
+
+test("sortSchedulesByDateDesc method when ordered correctly shouldn't return a error", () => {
+  let dateTimeA = new Date(2020, 11, 20, 12, 50);
+  let dateTimeB = new Date(2020, 11, 20, 12, 40);
+  let dateTimeC = new Date(2020, 11, 19, 12, 50);
+
+  let dateTimeArr = [
+    { publication_date: dateTimeB },
+    { publication_date: dateTimeC },
+    { publication_date: dateTimeA },
+  ];
+
+  let arrOrdered = sortSchedulesByDateDesc(dateTimeArr, "publication_date");
+
+  expect(arrOrdered).toEqual([
+    { publication_date: dateTimeA },
+    { publication_date: dateTimeB },
+    { publication_date: dateTimeC },
+  ]);
+});
+
+test("sortSchedulesByDateDesc method when key is null should return null", () => {
+  let dateTimeA = new Date(2020, 11, 20, 12, 50);
+  let dateTimeB = new Date(2020, 11, 20, 12, 40);
+  let dateTimeC = new Date(2020, 11, 19, 12, 50);
+
+  let dateTimeArr = [
+    { publication_date: dateTimeA },
+    { publication_date: dateTimeB },
+    { publication_date: dateTimeC },
+  ];
+
+  let arrOrdered = sortSchedulesByDateDesc(dateTimeArr);
+
+  expect(arrOrdered).toBeNull();
 });

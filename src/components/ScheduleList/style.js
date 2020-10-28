@@ -65,3 +65,8 @@ export const SocialNetworkIcon = styled.div`
     fill: #ffffff;
   }
 `;
+
+export const ActionSort = styled.span`
+  margin: 0 10px;
+  cursor: pointer;
+`;

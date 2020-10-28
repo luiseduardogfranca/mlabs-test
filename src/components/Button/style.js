@@ -34,6 +34,7 @@ export const ContainerButton = styled.button`
   width: 184px;
   height: 45px;
   cursor: pointer;
+  opacity: ${(props) => (props.disabled ? "0.7" : "initial")};
   transition: opacity 100ms;
   outline: none;
   &:active {
