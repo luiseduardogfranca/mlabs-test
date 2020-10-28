@@ -1,10 +1,10 @@
 # Posting Scheduling - mLabs
 
-A application for scheduling postings in social medias
+A application for scheduling postings in social networks
 
 <!-- ![Build Status](https://travis-ci.org/luiseduardogfranca/event-scheduling.svg?branch=master) -->
 
-This project is an posting scheduling web application, developed in JavaScript, with ReactJS framework to manage the posting in many social medias.
+This project is an posting scheduling web application, developed in JavaScript, with ReactJS framework to manage the posting in many social networks.
 
 Posting Scheduling application: [https://scheduling-mlabs.herokuapp.com/](https://scheduling-mlabs.herokuapp.com/)
 
@@ -18,9 +18,28 @@ Posting Scheduling application: [https://scheduling-mlabs.herokuapp.com/](https:
 
 ### CI/CD
 
-This project use Travis to Continuos Integration and Heroku to deploy. After tests passed by Travis, the master branch is pushed and deployed in Heroku plataform.
+This project use Travis to Continuos Integration and Heroku to deploy. After tests passed by Travis, the main branch is pushed and deployed in Heroku plataform.
 
-Note: The free dynos enter the sleep mode after time, so the UpTimeRobot is used to ping in dyno every 15min.
+Note: The free dynos enter the sleep mode after time, so there may be a small dalay at the start of the application.
+
+### Structure
+
+This is a brief explanation of the project structure
+
+```
+    |public
+        |data (public files and json files to api simulation)
+    |src
+        |api (simulation of api with each route of a Restful API)
+        |components (all React components used in the application)
+        |commom (methods used throughout all application)
+        |pages (all pages available in the application)
+        !services (each entity to manage the API requests)
+        |styles (global styles used in components)
+    |App.test.js (all tests)
+    |database.js (all table anmes to manage a local database, in this case, localStorage)
+    |routes.js (manager all routes with react-router-dom)
+```
 
 ## Get started
 
