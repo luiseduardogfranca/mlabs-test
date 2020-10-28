@@ -14,6 +14,11 @@ import SendIcon from "../../assets/icons/send-linkedin.svg";
 import OkayIcon from "../../assets/icons/okay-linkedin.svg";
 import CommentIcon from "../../assets/icons/comment-linkedin.svg";
 import { ReactComponent as LinkedinIcon } from "../../assets/icons/linkedin.svg";
+import {
+  converteDateTime,
+  getTextOfDate,
+} from "../../common/utils/convertDateTime";
+import { getMonth } from "date-fns";
 
 export const CardLinkedin = (props) => {
   const { image, text, date } = props;
@@ -26,7 +31,7 @@ export const CardLinkedin = (props) => {
           </ImageAvatar>
           <AvatarName>
             <h1>Anselmo Carlos</h1>
-            <p>{`${date.date}`}</p>
+            <p>{getTextOfDate(date.date)}</p>
           </AvatarName>
         </CardAvatar>
       </CardLinkedinHeader>
