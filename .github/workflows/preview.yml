@@ -19,5 +19,5 @@ jobs:
           dist: build
           teardown: "true"
           build: |
-            npm install
-            npm run build
+            yarn install
+            yarn build
