@@ -16,7 +16,7 @@ jobs:
       - uses: afc163/surge-preview@v1
         with:
           surge_token: ${{ secrets.SURGE_TOKEN }}
-          dist: build
+          dist: public
           teardown: "true"
           build: |
             yarn install
