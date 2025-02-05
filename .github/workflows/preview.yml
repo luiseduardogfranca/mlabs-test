@@ -13,11 +13,12 @@ jobs:
       pull-requests: write # allow surge-preview to create/update PR comments
     steps:
       - uses: actions/checkout@v4
+      - name: Install Packages
+          run: yarn install
+      - name: Build React App
+          run: yarn build
       - uses: afc163/surge-preview@v1
         with:
           surge_token: ${{ secrets.SURGE_TOKEN }}
-          dist: ""
+          dist: "build"
           teardown: "true"
-          build: |
-            yarn install
-            yarn build
