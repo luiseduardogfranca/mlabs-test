@@ -1,8 +1,7 @@
-name: 🔂 Surge PR Preview
+name: 🟠 mLabs PR Preview - by Surge
 
 on:
   pull_request:
-    # when using teardown: 'true', add default event types + closed event type
     types: [opened, synchronize, reopened, closed]
 jobs:
   preview:
