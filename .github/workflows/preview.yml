@@ -16,7 +16,7 @@ jobs:
       - name: install
         run: yarn install
       - name: build
-        run: yarn build
+        run: yarn build || (echo "Erro na build" && exit 1)
       - name: Verificar estrutura de diretórios antes do Surge Preview
         run: ls -la
       - uses: afc163/surge-preview@v1
