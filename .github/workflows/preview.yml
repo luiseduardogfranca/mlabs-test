@@ -13,6 +13,12 @@ jobs:
       pull-requests: write # allow surge-preview to create/update PR comments
     steps:
       - uses: actions/checkout@v2
+      - name: install
+        run: yarn install
+      - name: build
+        run: yarn build
+      - name: Verificar estrutura de diretórios antes do Surge Preview
+        run: ls -la
       - uses: afc163/surge-preview@v1
         with:
           surge_token: ${{ secrets.SURGE_TOKEN }}
