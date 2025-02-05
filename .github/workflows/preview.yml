@@ -22,3 +22,4 @@ jobs:
           surge_token: ${{ secrets.SURGE_TOKEN }}
           dist: "build"
           teardown: "true"
+          build: ""
