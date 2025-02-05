@@ -14,9 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install Packages
-          run: yarn install
+        run: yarn install
       - name: Build React App
-          run: yarn build
+        run: yarn build
       - uses: afc163/surge-preview@v1
         with:
           surge_token: ${{ secrets.SURGE_TOKEN }}
